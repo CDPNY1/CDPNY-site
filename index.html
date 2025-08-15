@@ -1,0 +1,366 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CDPNY - Community Development Project New York</title>
+
+  <!-- Tailwind + Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
+    .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
+    .hero-section {
+      background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url('https://images.unsplash.com/photo-1521747116042-5a810fda9664') center/cover no-repeat;
+    }
+    .impact-stat { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navigation (no donate button; no mobile menu) -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <!-- Logo from Google Drive -->
+          <img class="h-10 w-auto"
+               src="https://drive.google.com/uc?export=view&id=1Zj7649HAfO885RdsS1rFo235AtINfxh3"
+               alt="CDPNY Logo"/>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Home</a>
+          <a href="#about" class="text-gray-900 hover:text-blue-600 text-sm font-medium">About</a>
+          <a href="#events" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Events</a>
+          <a href="#impact" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Our Impact</a>
+          <a href="#board" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Board</a>
+          <a href="#contact" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero-section text-white py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="md:flex md:items-center md:justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Growing Our Community Together</h1>
+          <p class="text-xl mb-8">CDPNY is dedicated to fostering community development through sports, academic activities for youth, and recreational programs for seniors in New York.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#about" class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-lg text-lg font-medium transition text-center">Learn More</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Community gathering" class="rounded-lg shadow-2xl max-w-full h-auto"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About CDPNY</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="md:flex md:items-center md:space-x-10">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Team working together" class="rounded-lg shadow-lg w-full"/>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+          <p class="text-gray-600 mb-6">To grow our community through sports and academic activities for our youth, adults and recreational programs for seniors.</p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            <li>Empowering Communities</li>
+            <li>Be the source of positivity</li>
+            <li>Help us make a difference</li>
+            <li>We're all in this together</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join us for our upcoming community events, workshops, and initiatives.</p>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8">
+        <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781" alt="Youth soccer tournament" class="w-full h-48 object-cover"/>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Sports</span>
+              <span><i class="far fa-calendar-alt mr-1"></i> Labor Day Weekend 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY Youth Soccer Tournament 2025</h3>
+            <p class="text-gray-600 mb-4">In Association with DR. Kamal, Shahel & Saif. Exciting tournament for youth players of all skill levels.</p>
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <i class="fas fa-map-marker-alt mr-2"></i><span>Pals Oval (88th St)</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <i class="fas fa-clock mr-2"></i><span>Register by August 28, 2025</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500 mb-4">
+              <i class="fas fa-phone-alt mr-2"></i><span>Shabbir - 718-730-3311</span>
+            </div>
+            <!-- No donate button here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section id="impact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how CDPNY has made a difference in communities across New York.</p>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="impact-stat text-white p-8 rounded-lg text-center">
+          <div class="text-5xl font-bold mb-2">1,200+</div>
+          <h3 class="text-xl font-semibold mb-2">Community Members Served</h3>
+          <p class="text-blue-100">Through our various programs and initiatives each year</p>
+        </div>
+        <div class="impact-stat text-white p-8 rounded-lg text-center">
+          <div class="text-5xl font-bold mb-2">85%</div>
+          <h3 class="text-xl font-semibold mb-2">Program Success Rate</h3>
+          <p class="text-blue-100">Of participants report positive outcomes from our programs</p>
+        </div>
+        <div class="impact-stat text-white p-8 rounded-lg text-center">
+          <div class="text-5xl font-bold mb-2">50+</div>
+          <h3 class="text-xl font-semibold mb-2">Community Projects</h3>
+          <p class="text-blue-100">Completed in partnership with local residents</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Board of Directors (names only; larger tiles so names don't cut off) -->
+  <section id="board" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Board of Directors</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Name tile: min 120×120 (~“30×30” look), wraps long names -->
+        <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4
+                    min-w-[120px] min-h-[120px]">
+          <span class="font-semibold text-gray-900 break-words">Mohammed A. W. Sarwar</span>
+        </div>
+
+        <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4
+                    min-w-[120px] min-h-[120px]">
+          <span class="font-semibold text-gray-900 break-words">Shabbir M. Ahmed</span>
+        </div>
+
+        <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4
+                    min-w-[120px] min-h-[120px]">
+          <span class="font-semibold text-gray-900 break-words">Anwar Khan</span>
+        </div>
+
+        <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4
+                    min-w-[120px] min-h-[120px]">
+          <span class="font-semibold text-gray-900 break-words">M. Juned Ahmed</span>
+        </div>
+
+        <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4
+                    min-w-[120px] min-h-[120px]">
+          <span class="font-semibold text-gray-900 break-words">Moksud Mohammed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support / Zelle (ONLY donate button lives here) -->
+  <section id="support" class="py-20 bg-gray-50">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Support CDPNY</h2>
+      <p class="text-gray-600 mb-8">
+        Your support helps us continue our programs. Click the button to open our Zelle QR code
+        and scan it with your banking app to donate.
+      </p>
+
+      <!-- Zelle button opens your Drive-hosted QR in a new tab -->
+      <a class="inline-flex items-center justify-center gap-2 bg-[#6b1d9b] hover:bg-[#53177c] text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
+         href="https://drive.google.com/uc?export=view&id=1zOYMrGz259CZguRJb5VY2UW3GxCYjy0s"
+         target="_blank" rel="noopener">
+        <i class="fa-solid fa-qrcode"></i> Donate with Zelle
+      </a>
+
+      <!-- Inline preview for scanning on the page -->
+      <div class="mt-8">
+        <img
+          src="https://drive.google.com/uc?export=view&id=1zOYMrGz259CZguRJb5VY2UW3GxCYjy0s"
+          alt="Zelle QR Code" class="mx-auto w-56 h-auto rounded-lg shadow"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Have questions or want to partner with us? We'd love to hear from you.</p>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input id="name" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"/>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input id="email" type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"/>
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input id="subject" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"/>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition w-full">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Information</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Phone</h4>
+                <p class="text-gray-600">1 (718) 730-3311</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Email</h4>
+                <p class="text-gray-600">MyCDPNY@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="font-bold text-gray-900 mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="https://facebook.com/myCDPNY" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/myCDPNY" class="w-10 h-10 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com/myCDPNY" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <!-- Logo from Google Drive -->
+          <img src="https://drive.google.com/uc?export=view&id=1Zj7649HAfO885RdsS1rFo235AtINfxh3" alt="CDPNY Logo" class="h-10 mb-4"/>
+          <p class="text-gray-400">Growing our community through sports, academics and recreational programs.</p>
+          <p class="text-gray-400 mt-2">Website: <a href="https://myCDPNY.com" class="text-blue-400 hover:text-white">myCDPNY.com</a></p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="#events" class="text-gray-400 hover:text-white transition">Events</a></li>
+            <li><a href="#impact" class="text-gray-400 hover:text-white transition">Our Impact</a></li>
+            <li><a href="#board" class="text-gray-400 hover:text-white transition">Board</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Programs</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Youth Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Financial Literacy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Community Cleanups</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Adult Education</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Neighborhood Projects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+          <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates on events and initiatives.</p>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"/>
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">© 2025 CDPNY. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Smooth scrolling only (mobile menu toggle removed) -->
+  <script>
+    // Smooth scrolling for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const el = document.querySelector(targetId);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>

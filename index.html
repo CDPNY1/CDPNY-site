@@ -14,25 +14,31 @@
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
     .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
     .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
+
+    /* Hero background: gradient + subtle centered logo */
     .hero-section {
-      background:
-        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-        url('https://images.unsplash.com/photo-1521747116042-5a810fda9664') center/cover no-repeat;
+      position: relative;
+      background: linear-gradient(135deg, #6B73FF 0%, #00D4FF 100%);
     }
+    .hero-section::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: url("images/cdpny-logo.png") center / min(70vmin, 560px) no-repeat;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
     .impact-stat { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
   </style>
 </head>
 <body class="bg-gray-50">
 
-  <!-- Navigation (no donate button; no mobile menu) -->
+  <!-- Navigation -->
   <nav class="bg-white shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex items-center">
-          <!-- Logo from your repo -->
-          <img class="h-10 w-auto"
-               src="images/cdpny-logo.png"
-               alt="CDPNY Logo"/>
+          <img class="h-10 w-auto" src="images/cdpny-logo.png" alt="CDPNY Logo"/>
         </div>
 
         <div class="hidden md:flex items-center space-x-8">
@@ -60,7 +66,6 @@
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-          <!-- UPDATED hero right-side image -->
           <img src="images/hero-community.jpeg" alt="Kids and families at a community event"
                class="rounded-lg shadow-2xl max-w-full h-auto" loading="lazy"/>
         </div>
@@ -78,7 +83,6 @@
 
       <div class="md:flex md:items-center md:space-x-10">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <!-- UPDATED about image -->
           <img src="images/about-community.jpeg" alt="Kids and mentors in a community program"
                class="rounded-lg shadow-lg w-full" loading="lazy"/>
         </div>
@@ -106,7 +110,7 @@
       </div>
 
       <div class="grid grid-cols-1 gap-8">
-        <!-- UPDATED single event card using your poster -->
+        <!-- Event card -->
         <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
           <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
                class="w-full h-72 object-cover">
@@ -139,7 +143,6 @@
               <span>Info &amp; Registration: Shabbir — 718-730-3311</span>
             </div>
 
-            <!-- If you get a real registration link later, replace #contact with it -->
             <a href="#contact"
                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition">
                Register / Ask a Question
@@ -179,7 +182,7 @@
     </div>
   </section>
 
-  <!-- Board of Directors (names only; larger tiles so names don't cut off) -->
+  <!-- Board of Directors -->
   <section id="board" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
@@ -207,7 +210,7 @@
     </div>
   </section>
 
-  <!-- Support / Zelle (ONLY donate button lives here) -->
+  <!-- Support / Zelle -->
   <section id="support" class="py-20 bg-gray-50">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Support CDPNY</h2>
@@ -216,18 +219,13 @@
         and scan it with your banking app to donate.
       </p>
 
-      <!-- Zelle button opens the repo-hosted QR in a new tab -->
       <a class="inline-flex items-center justify-center gap-2 bg-[#6b1d9b] hover:bg-[#53177c] text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
-         href="images/zelle-qr.png"
-         target="_blank" rel="noopener">
+         href="images/zelle-qr.png" target="_blank" rel="noopener">
         <i class="fa-solid fa-qrcode"></i> Donate with Zelle
       </a>
 
-      <!-- Inline preview for scanning on the page -->
       <div class="mt-8">
-        <img
-          src="images/zelle-qr.png"
-          alt="Zelle QR Code" class="mx-auto w-56 h-auto rounded-lg shadow"/>
+        <img src="images/zelle-qr.png" alt="Zelle QR Code" class="mx-auto w-56 h-auto rounded-lg shadow"/>
       </div>
     </div>
   </section>
@@ -310,7 +308,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <!-- Logo from your repo -->
           <img src="images/cdpny-logo.png" alt="CDPNY Logo" class="h-10 mb-4"/>
           <p class="text-gray-400">Growing our community through sports, academics and recreational programs.</p>
           <p class="text-gray-400 mt-2">Website: <a href="https://mycdpny.com" class="text-blue-400 hover:text-white">mycdpny.com</a></p>
@@ -362,7 +359,7 @@
     </div>
   </footer>
 
-  <!-- ===== Event Popup (first visit; auto-disables after event) ===== -->
+  <!-- ===== Event Popup (ALWAYS shows until END) ===== -->
   <div id="evtModal" class="hidden fixed inset-0 z-[60]">
     <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
     <div class="relative mx-auto mt-20 w-11/12 max-w-xl rounded-xl bg-white shadow-2xl">
@@ -389,9 +386,9 @@
     </div>
   </div>
 
-  <!-- Scripts: Smooth scrolling + popup logic -->
+  <!-- Scripts -->
   <script>
-    // Smooth scrolling for internal anchors
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
@@ -403,23 +400,22 @@
       });
     });
 
-    <script>
-  // === Event popup: ALWAYS show on each page load until END ===
-  (function () {
-    const END = new Date("2025-09-02T00:00:00-04:00"); // stop showing after this
-    const modal = document.getElementById('evtModal');
-    const show  = () => modal.classList.remove('hidden');
-    const hide  = () => modal.classList.add('hidden');
+    // Popup: ALWAYS show on each page load until END
+    (function () {
+      const END = new Date("2025-09-02T00:00:00-04:00"); // stop showing after this
+      const modal = document.getElementById('evtModal');
+      const show  = () => modal.classList.remove('hidden');
+      const hide  = () => modal.classList.add('hidden');
 
-    if (new Date() < END) {
-      show(); // always show on load (no localStorage)
-    } else {
-      hide();
-    }
+      if (new Date() < END) {
+        show(); // no localStorage -> shows every visit
+      } else {
+        hide();
+      }
 
-    document.getElementById('evtClose')?.addEventListener('click', hide);
-    document.getElementById('evtLater')?.addEventListener('click', hide);
-  })();
-</script>
+      document.getElementById('evtClose')?.addEventListener('click', hide);
+      document.getElementById('evtLater')?.addEventListener('click', hide);
+    })();
+  </script>
 </body>
 </html>

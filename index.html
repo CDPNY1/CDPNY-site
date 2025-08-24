@@ -14,20 +14,11 @@
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
     .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
     .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
-
-    /* UPDATED hero background: gradient + subtle centered logo */
     .hero-section {
-      position: relative;
-      background: linear-gradient(135deg, #6B73FF 0%, #00D4FF 100%);
+      background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url('https://images.unsplash.com/photo-1521747116042-5a810fda9664') center/cover no-repeat;
     }
-    .hero-section::after {
-      content: "";
-      position: absolute; inset: 0;
-      background: url("images/cdpny-logo.png") center / min(70vmin, 560px) no-repeat;
-      opacity: 0.08;
-      pointer-events: none;
-    }
-
     .impact-stat { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
   </style>
 </head>
@@ -69,7 +60,7 @@
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-          <!-- hero right-side image -->
+          <!-- UPDATED hero right-side image -->
           <img src="images/hero-community.jpeg" alt="Kids and families at a community event"
                class="rounded-lg shadow-2xl max-w-full h-auto" loading="lazy"/>
         </div>
@@ -87,7 +78,7 @@
 
       <div class="md:flex md:items-center md:space-x-10">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <!-- about image -->
+          <!-- UPDATED about image -->
           <img src="images/about-community.jpeg" alt="Kids and mentors in a community program"
                class="rounded-lg shadow-lg w-full" loading="lazy"/>
         </div>
@@ -115,7 +106,7 @@
       </div>
 
       <div class="grid grid-cols-1 gap-8">
-        <!-- event card using your poster -->
+        <!-- UPDATED single event card using your poster -->
         <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
           <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
                class="w-full h-72 object-cover">
@@ -412,27 +403,23 @@
       });
     });
 
-    // === Event popup (one-time until end date) ===
-    (function() {
-      const END = new Date("2025-09-02T00:00:00-04:00"); // stop showing after this
-      const KEY = "cdpny_evt_seen_2025_08_31";
-      const modal = document.getElementById('evtModal');
-      const show = () => modal.classList.remove('hidden');
-      const hide = () => modal.classList.add('hidden');
+    <script>
+  // === Event popup: ALWAYS show on each page load until END ===
+  (function () {
+    const END = new Date("2025-09-02T00:00:00-04:00"); // stop showing after this
+    const modal = document.getElementById('evtModal');
+    const show  = () => modal.classList.remove('hidden');
+    const hide  = () => modal.classList.add('hidden');
 
-      if (new Date() < END && !localStorage.getItem(KEY)) {
-        show();
-      }
+    if (new Date() < END) {
+      show(); // always show on load (no localStorage)
+    } else {
+      hide();
+    }
 
-      document.getElementById('evtClose')?.addEventListener('click', () => {
-        hide();
-        localStorage.setItem(KEY, '1');
-      });
-      document.getElementById('evtLater')?.addEventListener('click', () => {
-        hide();
-        localStorage.setItem(KEY, '1');
-      });
-    })();
-  </script>
+    document.getElementById('evtClose')?.addEventListener('click', hide);
+    document.getElementById('evtLater')?.addEventListener('click', hide);
+  })();
+</script>
 </body>
 </html>

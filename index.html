@@ -41,6 +41,7 @@
           <a href="#events" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Events</a>
           <a href="#impact" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Our Impact</a>
           <a href="#board" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Board</a>
+          <a href="#support" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Support</a>
           <a href="#contact" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Contact</a>
         </div>
       </div>
@@ -59,7 +60,9 @@
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Community gathering" class="rounded-lg shadow-2xl max-w-full h-auto"/>
+          <!-- UPDATED hero right-side image -->
+          <img src="images/hero-community.jpeg" alt="Kids and families at a community event"
+               class="rounded-lg shadow-2xl max-w-full h-auto" loading="lazy"/>
         </div>
       </div>
     </div>
@@ -75,7 +78,9 @@
 
       <div class="md:flex md:items-center md:space-x-10">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Team working together" class="rounded-lg shadow-lg w-full"/>
+          <!-- UPDATED about image -->
+          <img src="images/about-community.jpeg" alt="Kids and mentors in a community program"
+               class="rounded-lg shadow-lg w-full" loading="lazy"/>
         </div>
         <div class="md:w-1/2">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -101,25 +106,44 @@
       </div>
 
       <div class="grid grid-cols-1 gap-8">
+        <!-- UPDATED single event card using your poster -->
         <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
-          <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781" alt="Youth soccer tournament" class="w-full h-48 object-cover"/>
+          <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
+               class="w-full h-72 object-cover">
           <div class="p-6">
             <div class="flex items-center text-sm text-gray-500 mb-2">
               <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Sports</span>
-              <span><i class="far fa-calendar-alt mr-1"></i> Labor Day Weekend 2025</span>
+              <span><i class="far fa-calendar-alt mr-1"></i> Sunday, Aug 31, 2025</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY Youth Soccer Tournament 2025</h3>
-            <p class="text-gray-600 mb-4">In Association with DR. Kamal, Shahel & Saif. Exciting tournament for youth players of all skill levels.</p>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY &amp; JUBO Youth Soccer Tournament 2025</h3>
+
+            <p class="text-gray-600 mb-3">In association with: Dr. Khaled, Shahel &amp; Saif</p>
+
+            <ul class="text-gray-600 mb-4 space-y-1">
+              <li><i class="fa-solid fa-check text-green-600 mr-2"></i>No Registration Fee</li>
+              <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Age: 14 and under</li>
+              <li><i class="fa-solid fa-check text-green-600 mr-2"></i>8v8, 12 in roster</li>
+            </ul>
+
             <div class="flex items-center text-sm text-gray-500 mb-2">
-              <i class="fas fa-map-marker-alt mr-2"></i><span>Pals Oval (88th St)</span>
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Pals Oval (88th St)</span>
             </div>
             <div class="flex items-center text-sm text-gray-500 mb-2">
-              <i class="fas fa-clock mr-2"></i><span>Register by August 28, 2025</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>Register by Friday, Aug 29</span>
             </div>
             <div class="flex items-center text-sm text-gray-500 mb-4">
-              <i class="fas fa-phone-alt mr-2"></i><span>Shabbir - 718-730-3311</span>
+              <i class="fas fa-phone-alt mr-2"></i>
+              <span>Info &amp; Registration: Shabbir — 718-730-3311</span>
             </div>
-            <!-- No donate button here -->
+
+            <!-- If you get a real registration link later, replace #contact with it -->
+            <a href="#contact"
+               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition">
+               Register / Ask a Question
+            </a>
           </div>
         </div>
       </div>
@@ -289,7 +313,7 @@
           <!-- Logo from your repo -->
           <img src="images/cdpny-logo.png" alt="CDPNY Logo" class="h-10 mb-4"/>
           <p class="text-gray-400">Growing our community through sports, academics and recreational programs.</p>
-          <p class="text-gray-400 mt-2">Website: <a href="https://myCDPNY.com" class="text-blue-400 hover:text-white">myCDPNY.com</a></p>
+          <p class="text-gray-400 mt-2">Website: <a href="https://mycdpny.com" class="text-blue-400 hover:text-white">mycdpny.com</a></p>
         </div>
 
         <div>
@@ -338,7 +362,34 @@
     </div>
   </footer>
 
-  <!-- Scripts: Smooth scrolling only (mobile menu toggle removed) -->
+  <!-- ===== Event Popup (first visit; auto-disables after event) ===== -->
+  <div id="evtModal" class="hidden fixed inset-0 z-[60]">
+    <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+    <div class="relative mx-auto mt-20 w-11/12 max-w-xl rounded-xl bg-white shadow-2xl">
+      <div class="flex justify-between items-center border-b px-5 py-3">
+        <h3 class="text-lg font-semibold">Event coming up</h3>
+        <button id="evtClose" class="text-gray-500 hover:text-gray-800" aria-label="Close">✕</button>
+      </div>
+      <div class="p-5 space-y-4">
+        <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster" class="rounded-lg shadow">
+        <div>
+          <h4 class="text-xl font-bold text-gray-900" id="evtTitle">CDPNY & JUBO Youth Soccer Tournament 2025</h4>
+          <p class="text-gray-700">
+            <span id="evtDate">Sunday, Aug 31, 2025</span> •
+            <span id="evtLocation">Pals Oval (88th St)</span>
+          </p>
+          <p class="text-gray-700 mt-1">No Registration Fee · Age 14 & under · 8v8 (12 roster)</p>
+          <p class="text-gray-700">Info & Registration: Shabbir — 718-730-3311</p>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button id="evtLater" class="px-4 py-2 rounded border">Maybe later</button>
+          <a id="evtCTA" href="#contact" class="px-4 py-2 rounded bg-indigo-600 text-white">Ask a question</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts: Smooth scrolling + popup logic -->
   <script>
     // Smooth scrolling for internal anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -351,6 +402,28 @@
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    // === Event popup (one-time until end date) ===
+    (function() {
+      const END = new Date("2025-09-02T00:00:00-04:00"); // stop showing after this
+      const KEY = "cdpny_evt_seen_2025_08_31";
+      const modal = document.getElementById('evtModal');
+      const show = () => modal.classList.remove('hidden');
+      const hide = () => modal.classList.add('hidden');
+
+      if (new Date() < END && !localStorage.getItem(KEY)) {
+        show();
+      }
+
+      document.getElementById('evtClose')?.addEventListener('click', () => {
+        hide();
+        localStorage.setItem(KEY, '1');
+      });
+      document.getElementById('evtLater')?.addEventListener('click', () => {
+        hide();
+        localStorage.setItem(KEY, '1');
+      });
+    })();
   </script>
 </body>
 </html>

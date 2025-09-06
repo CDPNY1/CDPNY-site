@@ -107,55 +107,59 @@
   <!-- Events -->
   <section id="events" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join us for our upcoming community events, workshops, and initiatives.</p>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">No upcoming events right now. Check back soon!</p>
         <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
       </div>
 
-      <div class="grid grid-cols-1 gap-8">
-        <!-- event card using your poster -->
-        <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
-          <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
-               class="w-full h-72 object-cover">
-          <div class="p-6">
-            <div class="flex items-center text-sm text-gray-500 mb-2">
-              <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Sports</span>
-              <span><i class="far fa-calendar-alt mr-1"></i> Sunday, Aug 31, 2025</span>
+      <!-- Past Events -->
+      <div class="mt-12">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Past Events</h3>
+
+        <div class="grid grid-cols-1 gap-8">
+          <!-- moved event card -->
+          <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
+                 class="w-full h-72 object-cover">
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Past</span>
+                <span><i class="far fa-calendar-alt mr-1"></i> Sunday, Aug 31, 2025</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY &amp; JUBO Youth Soccer Tournament 2025</h3>
+
+              <p class="text-gray-600 mb-3">In association with: Dr. Khaled, Shahel &amp; Saif</p>
+
+              <ul class="text-gray-600 mb-4 space-y-1">
+                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>No Registration Fee</li>
+                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Age: 14 and under</li>
+                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>8v8, 12 in roster</li>
+              </ul>
+
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Pals Oval (88th St)</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-clock mr-2"></i>
+                <span>Event concluded</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-500 mb-4">
+                <i class="fas fa-phone-alt mr-2"></i>
+                <span>Info: Shabbir — 718-730-3311</span>
+              </div>
+
+              <!-- turned off registration since event is past -->
+              <button class="inline-block bg-gray-300 text-gray-600 px-4 py-2 rounded-md text-sm font-medium cursor-not-allowed" aria-disabled="true" disabled>
+                Registration closed
+              </button>
             </div>
-
-            <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY &amp; JUBO Youth Soccer Tournament 2025</h3>
-
-            <p class="text-gray-600 mb-3">In association with: Dr. Khaled, Shahel &amp; Saif</p>
-
-            <ul class="text-gray-600 mb-4 space-y-1">
-              <li><i class="fa-solid fa-check text-green-600 mr-2"></i>No Registration Fee</li>
-              <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Age: 14 and under</li>
-              <li><i class="fa-solid fa-check text-green-600 mr-2"></i>8v8, 12 in roster</li>
-            </ul>
-
-            <div class="flex items-center text-sm text-gray-500 mb-2">
-              <i class="fas fa-map-marker-alt mr-2"></i>
-              <span>Pals Oval (88th St)</span>
-            </div>
-            <div class="flex items-center text-sm text-gray-500 mb-2">
-              <i class="fas fa-clock mr-2"></i>
-              <span>Register by Friday, Aug 29</span>
-            </div>
-            <div class="flex items-center text-sm text-gray-500 mb-4">
-              <i class="fas fa-phone-alt mr-2"></i>
-              <span>Info &amp; Registration: Shabbir — 718-730-3311</span>
-            </div>
-
-            <!-- Register button to your RSVP Google Form -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfa-Pepsmi2ZWU5mpUhE2QaOedDpgWyuyWKGEjsQ4EvSyc-Ww/viewform?usp=dialog"
-               target="_blank" rel="noopener"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition">
-               Register
-            </a>
           </div>
         </div>
       </div>
+      <!-- /Past Events -->
     </div>
   </section>
 
@@ -351,32 +355,7 @@
     </div>
   </footer>
 
-  <!-- ===== Event Popup (ALWAYS shows until END) ===== -->
-  <div id="evtModal" class="hidden fixed inset-0 z-[60]">
-    <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
-    <div class="relative mx-auto mt-20 w-11/12 max-w-xl rounded-xl bg-white shadow-2xl">
-      <div class="flex justify-between items-center border-b px-5 py-3">
-        <h3 class="text-lg font-semibold">Event coming up</h3>
-        <button id="evtClose" class="text-gray-500 hover:text-gray-800" aria-label="Close">✕</button>
-      </div>
-      <div class="p-5 space-y-4">
-        <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster" class="rounded-lg shadow">
-        <div>
-          <h4 class="text-xl font-bold text-gray-900" id="evtTitle">CDPNY & JUBO Youth Soccer Tournament 2025</h4>
-          <p class="text-gray-700">
-            <span id="evtDate">Sunday, Aug 31, 2025</span> •
-            <span id="evtLocation">Pals Oval (88th St)</span>
-          </p>
-          <p class="text-gray-700 mt-1">No Registration Fee · Age 14 & under · 8v8 (12 roster)</p>
-          <p class="text-gray-700">Info & Registration: Shabbir — 718-730-3311</p>
-        </div>
-        <div class="flex justify-end gap-3">
-          <button id="evtLater" class="px-4 py-2 rounded border">Maybe later</button>
-          <a id="evtCTA" href="#contact" class="px-4 py-2 rounded bg-indigo-600 text-white">Ask a question</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- (Popup removed/disabled since event has passed) -->
 
   <!-- Scripts -->
   <script>
@@ -391,23 +370,6 @@
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
-
-    // Popup: ALWAYS show on each page load until END
-    (function () {
-      const END = new Date("2025-09-02T00:00:00-04:00"); // stop showing after this
-      const modal = document.getElementById('evtModal');
-      const show  = () => modal.classList.remove('hidden');
-      const hide  = () => modal.classList.add('hidden');
-
-      if (new Date() < END) {
-        show(); // no localStorage -> shows every visit
-      } else {
-        hide();
-      }
-
-      document.getElementById('evtClose')?.addEventListener('click', hide);
-      document.getElementById('evtLater')?.addEventListener('click', hide);
-    })();
   </script>
 </body>
 </html>

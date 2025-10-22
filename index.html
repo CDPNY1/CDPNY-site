@@ -14,24 +14,9 @@
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
     .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
     .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
-
-    /* Hero background: green gradient + logo watermark */
-    .hero-section {
-      position: relative;
-      background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #065f46 100%);
-    }
-    .hero-section::after {
-      content: "";
-      position: absolute; inset: 0;
-      background: url("images/cdpny-logo.png") center / min(65vmin, 520px) no-repeat;
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(140%) brightness(110%);
-      opacity: 0.16;
-      pointer-events: none;
-      z-index: 0;
-    }
+    .hero-section { position: relative; background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #065f46 100%); }
+    .hero-section::after { content: ""; position: absolute; inset: 0; background: url("images/cdpny-logo.png") center / min(65vmin, 520px) no-repeat; mix-blend-mode: multiply; filter: grayscale(100%) contrast(140%) brightness(110%); opacity: 0.16; pointer-events: none; z-index: 0; }
     .hero-section > * { position: relative; z-index: 1; }
-
     .impact-stat { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
   </style>
 </head>
@@ -109,16 +94,52 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">No upcoming events right now. Check back soon!</p>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our next community tournament!</p>
         <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
       </div>
 
+      <!-- Upcoming Event Card -->
+      <div class="grid grid-cols-1 gap-8">
+        <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
+          <img src="images/event-fc26-ps5.JPG" alt="PS5 FC 26 Video Game Tournament 2025 Poster" class="w-full h-72 object-cover">
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Upcoming</span>
+              <span><i class="far fa-calendar-alt mr-1"></i> Thursday, Nov 27, 2025 • Starts 12:00 PM</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">PS5 FC 26 — Video Game Tournament 2025</h3>
+            <p class="text-gray-600 mb-3">Hosted by Community Development Project of New York (CDPNY)</p>
+
+            <ul class="text-gray-700 mb-4 space-y-1">
+              <li><i class="fa-solid fa-location-dot text-blue-600 mr-2"></i>Twilight Hall, 77-14 101 Ave, Ozone Park</li>
+              <li><i class="fa-solid fa-gamepad text-blue-600 mr-2"></i>Formats: 1v1 (13 & Under), 1v1 (14 & Over), 2v2 Doubles (All Ages)</li>
+              <li><i class="fa-solid fa-ticket text-blue-600 mr-2"></i>Entry Fee: $25 per player • Max 32 players per bracket</li>
+              <li><i class="fa-solid fa-circle-info text-blue-600 mr-2"></i>Bring your own controller (BYOC) or we can provide one</li>
+              <li><i class="fa-solid fa-shirt text-blue-600 mr-2"></i>Registered players receive a free CDPNY T-shirt</li>
+              <li><i class="fa-solid fa-phone text-blue-600 mr-2"></i><strong>To register:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your <strong>full name</strong> and bracket, then send the fee via Zelle (add your <strong>full name</strong> in the memo).</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="#support"
+                 class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md text-sm font-semibold transition">
+                <i class="fa-solid fa-money-bill-wave mr-2"></i> Go to Zelle (add your name)
+              </a>
+              <a href="images/event-fc26-ps5.JPG" target="_blank" rel="noopener"
+                 class="inline-flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium transition">
+                <i class="fa-regular fa-image mr-2"></i> View Poster
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Upcoming Event Card -->
+
       <!-- Past Events -->
-      <div class="mt-12">
+      <div class="mt-16">
         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Past Events</h3>
 
         <div class="grid grid-cols-1 gap-8">
-          <!-- moved event card -->
           <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
             <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
                  class="w-full h-72 object-cover">
@@ -151,7 +172,6 @@
                 <span>Info: Shabbir — 718-730-3311</span>
               </div>
 
-              <!-- turned off registration since event is past -->
               <button class="inline-block bg-gray-300 text-gray-600 px-4 py-2 rounded-md text-sm font-medium cursor-not-allowed" aria-disabled="true" disabled>
                 Registration closed
               </button>
@@ -224,14 +244,18 @@
   <section id="support" class="py-20 bg-gray-50">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Support CDPNY</h2>
+      <p class="text-gray-600 mb-3">
+        <strong>How to register for the tournament:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your
+        <strong>full name</strong> and bracket. Then send the entry fee via Zelle and
+        <strong>add your full name in the memo</strong> so we can confirm your spot.
+      </p>
       <p class="text-gray-600 mb-8">
-        Your support helps us continue our programs. Click the button to open our Zelle QR code
-        and scan it with your banking app to donate.
+        Use the button below to open our Zelle QR code and scan it with your banking app.
       </p>
 
       <a class="inline-flex items-center justify-center gap-2 bg-[#6b1d9b] hover:bg-[#53177c] text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
          href="images/zelle-qr.png" target="_blank" rel="noopener">
-        <i class="fa-solid fa-qrcode"></i> Donate with Zelle
+        <i class="fa-solid fa-qrcode"></i> Open Zelle QR (add your name in memo)
       </a>
 
       <div class="mt-8">
@@ -355,7 +379,41 @@
     </div>
   </footer>
 
-  <!-- (Popup removed/disabled since event has passed) -->
+  <!-- ===== POPUP MODAL (appears on every visit) ===== -->
+  <div id="event-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[60]" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-[92%] overflow-hidden">
+      <div class="relative">
+        <img src="images/event-fc26-ps5.JPG" alt="PS5 FC 26 Tournament Poster" class="w-full h-64 object-cover">
+        <button id="modal-close" class="absolute top-3 right-3 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-6">
+        <h3 id="eventModalTitle" class="text-2xl font-bold text-gray-900 mb-2">PS5 FC 26 — Video Game Tournament 2025</h3>
+        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2"></i>Thursday, Nov 27, 2025 • Starts 12:00 PM</p>
+        <p class="text-gray-700 mb-4">
+          <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+          Twilight Hall, 77-14 101 Ave, Ozone Park
+        </p>
+        <p class="text-gray-700 mb-5">
+          <strong>To register:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your <strong>full name</strong> and bracket.
+          Then tap the button below to go to our Zelle section and send the fee — please
+          <strong>add your full name in the Zelle memo</strong>.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#support"
+             class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md text-sm font-semibold transition">
+            <i class="fa-solid fa-money-bill-wave mr-2"></i> Go to Zelle (add your name)
+          </a>
+          <a href="#events"
+             class="inline-flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium transition">
+            <i class="fa-solid fa-circle-info mr-2"></i> View Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== /POPUP MODAL ===== -->
 
   <!-- Scripts -->
   <script>
@@ -369,6 +427,24 @@
         e.preventDefault();
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+    });
+
+    // Show modal on every page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('event-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      };
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     });
   </script>
 </body>

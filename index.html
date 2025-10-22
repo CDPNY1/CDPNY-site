@@ -14,8 +14,14 @@
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
     .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
     .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
+    /* Hero background: green gradient + logo watermark */
     .hero-section { position: relative; background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #065f46 100%); }
-    .hero-section::after { content: ""; position: absolute; inset: 0; background: url("images/cdpny-logo.png") center / min(65vmin, 520px) no-repeat; mix-blend-mode: multiply; filter: grayscale(100%) contrast(140%) brightness(110%); opacity: 0.16; pointer-events: none; z-index: 0; }
+    .hero-section::after {
+      content: ""; position: absolute; inset: 0;
+      background: url("images/cdpny-logo.png") center / min(65vmin, 520px) no-repeat;
+      mix-blend-mode: multiply; filter: grayscale(100%) contrast(140%) brightness(110%);
+      opacity: 0.16; pointer-events: none; z-index: 0;
+    }
     .hero-section > * { position: relative; z-index: 1; }
     .impact-stat { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
   </style>
@@ -29,7 +35,6 @@
         <div class="flex items-center">
           <img class="h-10 w-auto" src="images/cdpny-logo.png" alt="CDPNY Logo"/>
         </div>
-
         <div class="hidden md:flex items-center space-x-8">
           <a href="#home" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Home</a>
           <a href="#about" class="text-gray-900 hover:text-blue-600 text-sm font-medium">About</a>
@@ -117,7 +122,10 @@
               <li><i class="fa-solid fa-ticket text-blue-600 mr-2"></i>Entry Fee: $25 per player • Max 32 players per bracket</li>
               <li><i class="fa-solid fa-circle-info text-blue-600 mr-2"></i>Bring your own controller (BYOC) or we can provide one</li>
               <li><i class="fa-solid fa-shirt text-blue-600 mr-2"></i>Registered players receive a free CDPNY T-shirt</li>
-              <li><i class="fa-solid fa-phone text-blue-600 mr-2"></i><strong>To register:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your <strong>full name</strong> and bracket, then send the fee via Zelle (add your <strong>full name</strong> in the memo).</li>
+              <li><i class="fa-solid fa-phone text-blue-600 mr-2"></i>
+                <strong>To register:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your <strong>full name</strong> and bracket,
+                then send the fee via Zelle — <strong>add your full name in the memo</strong>.
+              </li>
             </ul>
 
             <div class="flex flex-wrap gap-3">
@@ -133,32 +141,26 @@
           </div>
         </div>
       </div>
-      <!-- /Upcoming Event Card -->
 
       <!-- Past Events -->
       <div class="mt-16">
         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Past Events</h3>
-
         <div class="grid grid-cols-1 gap-8">
           <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="images:event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
+            <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
                  class="w-full h-72 object-cover">
             <div class="p-6">
               <div class="flex items-center text-sm text-gray-500 mb-2">
                 <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Past</span>
                 <span><i class="far fa-calendar-alt mr-1"></i> Sunday, Aug 31, 2025</span>
               </div>
-
               <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY &amp; JUBO Youth Soccer Tournament 2025</h3>
-
               <p class="text-gray-600 mb-3">In association with: Dr. Khaled, Shahel &amp; Saif</p>
-
               <ul class="text-gray-600 mb-4 space-y-1">
                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>No Registration Fee</li>
                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Age: 14 and under</li>
                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>8v8, 12 in roster</li>
               </ul>
-
               <div class="flex items-center text-sm text-gray-500 mb-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>Pals Oval (88th St)</span>
@@ -171,7 +173,6 @@
                 <i class="fas fa-phone-alt mr-2"></i>
                 <span>Info: Shabbir — 718-730-3311</span>
               </div>
-
               <button class="inline-block bg-gray-300 text-gray-600 px-4 py-2 rounded-md text-sm font-medium cursor-not-allowed" aria-disabled="true" disabled>
                 Registration closed
               </button>
@@ -250,7 +251,7 @@
         <strong>add your full name in the memo</strong> so we can confirm your spot.
       </p>
       <p class="text-gray-600 mb-8">
-        Use the button below to open our Zelle QR code and scan it with your banking app.
+        Click the button to open our Zelle QR code and scan it with your banking app.
       </p>
 
       <a class="inline-flex items-center justify-center gap-2 bg-[#6b1d9b] hover:bg-[#53177c] text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
@@ -297,7 +298,6 @@
                 <p class="text-gray-600">1 (718) 730-3311</p>
               </div>
             </div>
-
             <div class="flex items-start">
               <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                 <i class="fas fa-envelope"></i>
@@ -417,7 +417,7 @@
 
   <!-- Scripts -->
   <script>
-    // Smooth scrolling
+    // Smooth scrolling for in-page links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');

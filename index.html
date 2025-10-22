@@ -14,7 +14,6 @@
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
     .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
     .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
-    /* Hero background: green gradient + logo watermark */
     .hero-section { position: relative; background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #065f46 100%); }
     .hero-section::after {
       content: ""; position: absolute; inset: 0;
@@ -106,7 +105,7 @@
       <!-- Upcoming Event Card -->
       <div class="grid grid-cols-1 gap-8">
         <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
-          <img src="newevents-poster.jpg?v=1" alt="PS5 FC 26 Video Game Tournament 2025 Poster" class="w-full h-72 object-cover">
+          <img src="images/newevents-poster.jpg?v=1" alt="PS5 FC 26 Video Game Tournament 2025 Poster" class="w-full h-72 object-cover">
           <div class="p-6">
             <div class="flex items-center text-sm text-gray-500 mb-2">
               <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Upcoming</span>
@@ -133,7 +132,7 @@
                  class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md text-sm font-semibold transition">
                 <i class="fa-solid fa-money-bill-wave mr-2"></i> Go to Zelle (add your name)
               </a>
-              <a href="newevents-poster.jpg?v=1" target="_blank" rel="noopener"
+              <a href="images/newevents-poster.jpg?v=1" target="_blank" rel="noopener"
                  class="inline-flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium transition">
                 <i class="fa-regular fa-image mr-2"></i> View Poster
               </a>
@@ -205,7 +204,7 @@
           <p class="text-blue-100">Of participants report positive outcomes from our programs</p>
         </div>
         <div class="impact-stat text-white p-8 rounded-lg text-center">
-          <div class="text-5xl font-bold mb-2">50+</div>
+          <div class="text-5xl font-bold mb-2">50+</</div>
           <h3 class="text-xl font-semibold mb-2">Community Projects</h3>
           <p class="text-blue-100">Completed in partnership with local residents</p>
         </div>
@@ -275,7 +274,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Left column: Button to Google Form -->
         <div>
           <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfu1-7z0wOeAmWBVCnZlYSe-1CC7Y-fNBF-9LpLJi3TLW-mxA/viewform?usp=dialog"
@@ -383,7 +381,7 @@
   <div id="event-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[60]" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
     <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-[92%] overflow-hidden">
       <div class="relative">
-        <img src="newevents-poster.jpg?v=1" alt="PS5 FC 26 Tournament Poster" class="w-full h-64 object-cover">
+        <img src="images/newevents-poster.jpg?v=1" alt="PS5 FC 26 Tournament Poster" class="w-full h-64 object-cover">
         <button id="modal-close" class="absolute top-3 right-3 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow" aria-label="Close">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -417,7 +415,7 @@
 
   <!-- Scripts -->
   <script>
-    // Smooth scrolling for in-page links
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');

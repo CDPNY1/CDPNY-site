@@ -1,39 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CDPNY - Community Development Project New York</title>
 
   <!-- Tailwind + Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-    .event-card { transition: all .3s ease; box-shadow: 0 10px 20px rgba(0,0,0,.1); }
-    .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.2); }
-    .hero-section { position: relative; background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #065f46 100%); }
-    .hero-section::after {
-      content: ""; position: absolute; inset: 0;
-      background: url("images/cdpny-logo.png") center / min(65vmin, 520px) no-repeat;
-      mix-blend-mode: multiply; filter: grayscale(100%) contrast(140%) brightness(110%);
-      opacity: 0.16; pointer-events: none; z-index: 0;
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
-    .hero-section > * { position: relative; z-index: 1; }
-    .impact-stat { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
+
+    .event-card {
+      transition: all .3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.2);
+    }
+
+    .hero-section {
+      position: relative;
+      background: linear-gradient(
+        135deg,
+        #16a34a 0%,
+        #10b981 50%,
+        #065f46 100%
+      );
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("images/cdpny-logo.png")
+        center / min(65vmin, 520px) no-repeat;
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(140%) brightness(110%);
+      opacity: 0.16;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .impact-stat {
+      background: linear-gradient(
+        135deg,
+        #6B73FF 0%,
+        #000DFF 100%
+      );
+    }
   </style>
 </head>
+
 <body class="bg-gray-50">
 
   <!-- Navigation -->
   <nav class="bg-white shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
+
         <div class="flex items-center">
-          <img class="h-10 w-auto" src="images/cdpny-logo.png" alt="CDPNY Logo"/>
+          <img
+            class="h-10 w-auto"
+            src="images/cdpny-logo.png"
+            alt="CDPNY Logo"
+          />
         </div>
+
         <div class="hidden md:flex items-center space-x-8">
           <a href="#home" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Home</a>
           <a href="#about" class="text-gray-900 hover:text-blue-600 text-sm font-medium">About</a>
@@ -43,45 +93,85 @@
           <a href="#support" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Support</a>
           <a href="#contact" class="text-gray-900 hover:text-blue-600 text-sm font-medium">Contact</a>
         </div>
+
       </div>
     </div>
   </nav>
+
 
   <!-- Hero -->
   <section id="home" class="hero-section text-white py-20 md:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="md:flex md:items-center md:justify-between">
+
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Growing Our Community Together</h1>
-          <p class="text-xl mb-8">CDPNY is dedicated to fostering community development through sports, academic activities for youth, and recreational programs for seniors in New York.</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Growing Our Community Together
+          </h1>
+
+          <p class="text-xl mb-8">
+            CDPNY is dedicated to fostering community development
+            through sports, academic activities for youth, and
+            recreational programs for seniors in New York.
+          </p>
+
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#about" class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-lg text-lg font-medium transition text-center">Learn More</a>
+            <a
+              href="#about"
+              class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-lg text-lg font-medium transition text-center"
+            >
+              Learn More
+            </a>
           </div>
         </div>
+
         <div class="md:w-1/2 flex justify-center">
-          <img src="images/hero-community.jpeg" alt="Kids and families at a community event"
-               class="rounded-lg shadow-2xl max-w-full h-auto" loading="lazy"/>
+          <img
+            src="images/hero-community.jpeg"
+            alt="Kids and families at a community event"
+            class="rounded-lg shadow-2xl max-w-full h-auto"
+            loading="lazy"
+          />
         </div>
+
       </div>
     </div>
   </section>
 
+
   <!-- About -->
   <section id="about" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About CDPNY</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          About CDPNY
+        </h2>
         <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
       </div>
 
       <div class="md:flex md:items-center md:space-x-10">
+
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <img src="images/about-community.jpeg" alt="Kids and mentors in a community program"
-               class="rounded-lg shadow-lg w-full" loading="lazy"/>
+          <img
+            src="images/about-community.jpeg"
+            alt="Kids and mentors in a community program"
+            class="rounded-lg shadow-lg w-full"
+            loading="lazy"
+          />
         </div>
+
         <div class="md:w-1/2">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-          <p class="text-gray-600 mb-6">To grow our community through sports and academic activities for our youth, adults and recreational programs for seniors.</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Our Mission
+          </h3>
+
+          <p class="text-gray-600 mb-6">
+            To grow our community through sports and academic
+            activities for our youth, adults and recreational
+            programs for seniors.
+          </p>
+
           <ul class="list-disc pl-5 space-y-2 text-gray-600">
             <li>Empowering Communities</li>
             <li>Be the source of positivity</li>
@@ -89,325 +179,741 @@
             <li>We're all in this together</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Events -->
   <section id="events" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Upcoming Events -->
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our next community tournament!</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Upcoming Events
+        </h2>
+
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Stay tuned for our next community event!
+        </p>
+
         <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
       </div>
 
-      <!-- Upcoming Event Card -->
-      <div class="grid grid-cols-1 gap-8">
-        <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
-          <img src="images/newevents-poster.jpg" alt="PS5 FC 26 Video Game Tournament 2025 Poster" class="w-full h-72 object-cover">
-          <div class="p-6">
-            <div class="flex items-center text-sm text-gray-500 mb-2">
-              <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Upcoming</span>
-              <span><i class="far fa-calendar-alt mr-1"></i> Thursday, Nov 27, 2025 • Starts 12:00 PM</span>
-            </div>
+      <!-- Coming Soon Message -->
+      <div class="bg-white rounded-lg shadow-lg p-12 text-center">
 
-            <h3 class="text-xl font-bold text-gray-900 mb-2">PS5 FC 26 — Video Game Tournament 2025</h3>
-            <p class="text-gray-600 mb-3">Hosted by Community Development Project of New York (CDPNY)</p>
-
-            <ul class="text-gray-700 mb-4 space-y-1">
-              <li><i class="fa-solid fa-location-dot text-blue-600 mr-2"></i>Twilight Hall, 77-14 101 Ave, Ozone Park</li>
-              <li><i class="fa-solid fa-gamepad text-blue-600 mr-2"></i>Formats: 1v1 (13 & Under), 1v1 (14 & Over), 2v2 Doubles (All Ages)</li>
-              <li><i class="fa-solid fa-ticket text-blue-600 mr-2"></i>Entry Fee: $25 per player • Max 32 players per bracket</li>
-              <li><i class="fa-solid fa-circle-info text-blue-600 mr-2"></i>Bring your own controller (BYOC) or we can provide one</li>
-              <li><i class="fa-solid fa-shirt text-blue-600 mr-2"></i>Registered players receive a free CDPNY T-shirt</li>
-              <li><i class="fa-solid fa-phone text-blue-600 mr-2"></i>
-                <strong>To register:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your <strong>full name</strong> and bracket,
-                then send the fee via Zelle — <strong>add your full name in the memo</strong>.
-              </li>
-            </ul>
-
-            <div class="flex flex-wrap gap-3">
-              <a href="#support"
-                 class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md text-sm font-semibold transition">
-                <i class="fa-solid fa-money-bill-wave mr-2"></i> Go to Zelle (add your name)
-              </a>
-              <a href="images/newevents-poster.jpg" target="_blank" rel="noopener"
-                 class="inline-flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium transition">
-                <i class="fa-regular fa-image mr-2"></i> View Poster
-              </a>
-            </div>
-          </div>
+        <div class="text-5xl text-green-600 mb-6">
+          <i class="fa-regular fa-calendar-check"></i>
         </div>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          New Events Coming Soon!
+        </h3>
+
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We're working on exciting new events for our community.
+          Stay tuned for upcoming announcements!
+        </p>
+
       </div>
+
 
       <!-- Past Events -->
       <div class="mt-16">
-        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Past Events</h3>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          Past Events
+        </h3>
+
         <div class="grid grid-cols-1 gap-8">
+
+          <!-- PS5 FC 26 Tournament -->
           <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="images/event-poster.jpg" alt="CDPNY & JUBO Youth Soccer Tournament 2025 poster"
-                 class="w-full h-72 object-cover">
+
+            <img
+              src="images/newevents-poster.jpg"
+              alt="PS5 FC 26 Video Game Tournament 2025 Poster"
+              class="w-full h-72 object-cover"
+            />
+
             <div class="p-6">
+
               <div class="flex items-center text-sm text-gray-500 mb-2">
-                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">Past</span>
-                <span><i class="far fa-calendar-alt mr-1"></i> Sunday, Aug 31, 2025</span>
+                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">
+                  Past
+                </span>
+
+                <span>
+                  <i class="far fa-calendar-alt mr-1"></i>
+                  Thursday, Nov 27, 2025 • 12:00 PM
+                </span>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">CDPNY &amp; JUBO Youth Soccer Tournament 2025</h3>
-              <p class="text-gray-600 mb-3">In association with: Dr. Khaled, Shahel &amp; Saif</p>
-              <ul class="text-gray-600 mb-4 space-y-1">
-                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>No Registration Fee</li>
-                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Age: 14 and under</li>
-                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>8v8, 12 in roster</li>
+
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                PS5 FC 26 — Video Game Tournament 2025
+              </h3>
+
+              <p class="text-gray-600 mb-3">
+                Hosted by Community Development Project of New York (CDPNY)
+              </p>
+
+              <ul class="text-gray-700 mb-4 space-y-1">
+
+                <li>
+                  <i class="fa-solid fa-location-dot text-blue-600 mr-2"></i>
+                  Twilight Hall, 77-14 101 Ave, Ozone Park
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-gamepad text-blue-600 mr-2"></i>
+                  Formats: 1v1 (13 &amp; Under),
+                  1v1 (14 &amp; Over),
+                  2v2 Doubles (All Ages)
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-ticket text-blue-600 mr-2"></i>
+                  Entry Fee: $25 per player • Max 32 players per bracket
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-info text-blue-600 mr-2"></i>
+                  Bring your own controller (BYOC) or one can be provided
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-shirt text-blue-600 mr-2"></i>
+                  Registered players received a free CDPNY T-shirt
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-green-600 mr-2"></i>
+                  Event concluded
+                </li>
+
               </ul>
+
+              <div class="flex flex-wrap gap-3">
+
+                <button
+                  class="bg-gray-300 text-gray-600 px-4 py-2 rounded-md text-sm font-medium cursor-not-allowed"
+                  disabled
+                >
+                  Registration Closed
+                </button>
+
+                <a
+                  href="images/newevents-poster.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium transition"
+                >
+                  <i class="fa-regular fa-image mr-2"></i>
+                  View Poster
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Youth Soccer Tournament -->
+          <div class="event-card bg-white rounded-lg overflow-hidden shadow-lg">
+
+            <img
+              src="images/event-poster.jpg"
+              alt="CDPNY &amp; JUBO Youth Soccer Tournament 2025 poster"
+              class="w-full h-72 object-cover"
+            />
+
+            <div class="p-6">
+
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+
+                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">
+                  Past
+                </span>
+
+                <span>
+                  <i class="far fa-calendar-alt mr-1"></i>
+                  Sunday, Aug 31, 2025
+                </span>
+
+              </div>
+
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                CDPNY &amp; JUBO Youth Soccer Tournament 2025
+              </h3>
+
+              <p class="text-gray-600 mb-3">
+                In association with: Dr. Khaled, Shahel &amp; Saif
+              </p>
+
+              <ul class="text-gray-600 mb-4 space-y-1">
+
+                <li>
+                  <i class="fa-solid fa-check text-green-600 mr-2"></i>
+                  No Registration Fee
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-green-600 mr-2"></i>
+                  Age: 14 and under
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-green-600 mr-2"></i>
+                  8v8, 12 in roster
+                </li>
+
+              </ul>
+
               <div class="flex items-center text-sm text-gray-500 mb-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>Pals Oval (88th St)</span>
               </div>
+
               <div class="flex items-center text-sm text-gray-500 mb-2">
                 <i class="fas fa-clock mr-2"></i>
                 <span>Event concluded</span>
               </div>
+
               <div class="flex items-center text-sm text-gray-500 mb-4">
                 <i class="fas fa-phone-alt mr-2"></i>
                 <span>Info: Shabbir — 718-730-3311</span>
               </div>
-              <button class="inline-block bg-gray-300 text-gray-600 px-4 py-2 rounded-md text-sm font-medium cursor-not-allowed" aria-disabled="true" disabled>
-                Registration closed
+
+              <button
+                class="inline-block bg-gray-300 text-gray-600 px-4 py-2 rounded-md text-sm font-medium cursor-not-allowed"
+                aria-disabled="true"
+                disabled
+              >
+                Registration Closed
               </button>
+
             </div>
           </div>
+
         </div>
       </div>
       <!-- /Past Events -->
+
     </div>
   </section>
+
 
   <!-- Impact -->
   <section id="impact" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how CDPNY has made a difference in communities across New York.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Our Impact
+        </h2>
+
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          See how CDPNY has made a difference in communities across New York.
+        </p>
+
         <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
         <div class="impact-stat text-white p-8 rounded-lg text-center">
           <div class="text-5xl font-bold mb-2">1,200+</div>
-          <h3 class="text-xl font-semibold mb-2">Community Members Served</h3>
-          <p class="text-blue-100">Through our various programs and initiatives each year</p>
+          <h3 class="text-xl font-semibold mb-2">
+            Community Members Served
+          </h3>
+          <p class="text-blue-100">
+            Through our various programs and initiatives each year
+          </p>
         </div>
+
         <div class="impact-stat text-white p-8 rounded-lg text-center">
           <div class="text-5xl font-bold mb-2">97%</div>
-          <h3 class="text-xl font-semibold mb-2">Program Success Rate</h3>
-          <p class="text-blue-100">Of participants report positive outcomes from our programs</p>
+          <h3 class="text-xl font-semibold mb-2">
+            Program Success Rate
+          </h3>
+          <p class="text-blue-100">
+            Of participants report positive outcomes from our programs
+          </p>
         </div>
+
         <div class="impact-stat text-white p-8 rounded-lg text-center">
-          <div class="text-5xl font-bold mb-2">50+</</div>
-          <h3 class="text-xl font-semibold mb-2">Community Projects</h3>
-          <p class="text-blue-100">Completed in partnership with local residents</p>
+          <div class="text-5xl font-bold mb-2">50+</div>
+          <h3 class="text-xl font-semibold mb-2">
+            Community Projects
+          </h3>
+          <p class="text-blue-100">
+            Completed in partnership with local residents
+          </p>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Board of Directors -->
   <section id="board" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Board of Directors</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Board of Directors
+        </h2>
         <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
         <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4 min-w-[120px] min-h-[120px]">
-          <span class="font-semibold text-gray-900 break-words">Mohammed A. W. Sarwar</span>
+          <span class="font-semibold text-gray-900 break-words">
+            Mohammed A. W. Sarwar
+          </span>
         </div>
+
         <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4 min-w-[120px] min-h-[120px]">
-          <span class="font-semibold text-gray-900 break-words">Shabbir M. Ahmed</span>
+          <span class="font-semibold text-gray-900 break-words">
+            Shabbir M. Ahmed
+          </span>
         </div>
+
         <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4 min-w-[120px] min-h-[120px]">
-          <span class="font-semibold text-gray-900 break-words">Anwar Khan</span>
+          <span class="font-semibold text-gray-900 break-words">
+            Anwar Khan
+          </span>
         </div>
+
         <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4 min-w-[120px] min-h-[120px]">
-          <span class="font-semibold text-gray-900 break-words">M. Juned Ahmed</span>
+          <span class="font-semibold text-gray-900 break-words">
+            M. Juned Ahmed
+          </span>
         </div>
+
         <div class="flex items-center justify-center text-center bg-gray-100 rounded-xl shadow p-4 min-w-[120px] min-h-[120px]">
-          <span class="font-semibold text-gray-900 break-words">Moksud Mohammed</span>
+          <span class="font-semibold text-gray-900 break-words">
+            Moksud Mohammed
+          </span>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Support / Zelle -->
   <section id="support" class="py-20 bg-gray-50">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Support CDPNY</h2>
-      <p class="text-gray-600 mb-3">
-        <strong>How to register for the tournament:</strong> Call/Text <strong>Tufayel (347) 341-3644</strong> with your
-        <strong>full name</strong> and bracket. Then send the entry fee via Zelle and
-        <strong>add your full name in the memo</strong> so we can confirm your spot.
+
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Support CDPNY
+      </h2>
+
+      <p class="text-lg text-gray-600 mb-4">
+        Help us continue making a difference in our community!
+        Your generous donations support our youth programs,
+        community events, sports tournaments, and recreational
+        activities for people of all ages.
       </p>
+
       <p class="text-gray-600 mb-8">
-        Click the button to open our Zelle QR code and scan it with your banking app.
+        Every contribution, big or small, helps us grow
+        and create more opportunities for our community.
+        Thank you for your support!
       </p>
 
-      <a class="inline-flex items-center justify-center gap-2 bg-[#6b1d9b] hover:bg-[#53177c] text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
-         href="images/zelle-qr.png" target="_blank" rel="noopener">
-        <i class="fa-solid fa-qrcode"></i> Open Zelle QR (add your name in memo)
-      </a>
+      <!-- Zelle Donation Card -->
+      <div class="bg-white rounded-xl shadow-lg p-8">
 
-      <div class="mt-8">
-        <img src="images/zelle-qr.png" alt="Zelle QR Code" class="mx-auto w-56 h-auto rounded-lg shadow"/>
+        <div class="text-5xl text-green-600 mb-4">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+          Make a Donation
+        </h3>
+
+        <p class="text-gray-600 mb-6">
+          Donate through Zelle by scanning the QR code
+          below with your banking app.
+        </p>
+
+        <!-- Zelle QR Code -->
+        <img
+          src="images/zelle-qr.png"
+          alt="CDPNY Zelle Donation QR Code"
+          class="mx-auto w-56 h-auto rounded-lg shadow mb-6"
+        />
+
+        <!-- Zelle Button -->
+        <a
+          href="images/zelle-qr.png"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center gap-2 bg-[#6b1d9b] hover:bg-[#53177c] text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
+        >
+          <i class="fa-solid fa-qrcode"></i>
+          Open Zelle QR Code
+        </a>
+
+        <p class="text-sm text-gray-500 mt-5">
+          Please include "CDPNY Donation" in your
+          Zelle payment memo.
+        </p>
+
       </div>
+
     </div>
   </section>
+
 
   <!-- Contact -->
   <section id="contact" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Have questions or want to partner with us? We'd love to hear from you.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Contact Us
+        </h2>
+
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Have questions or want to partner with us?
+          We'd love to hear from you.
+        </p>
+
         <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
         <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfu1-7z0wOeAmWBVCnZlYSe-1CC7Y-fNBF-9LpLJi3TLW-mxA/viewform?usp=dialog"
-             target="_blank" rel="noopener"
-             class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium w-full text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Get in Touch
+          </h3>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfu1-7z0wOeAmWBVCnZlYSe-1CC7Y-fNBF-9LpLJi3TLW-mxA/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium w-full text-center"
+          >
             Open Contact Form
           </a>
-          <p class="text-gray-500 mt-3 text-sm">This opens our Google Form in a new tab.</p>
+
+          <p class="text-gray-500 mt-3 text-sm">
+            This opens our Google Form in a new tab.
+          </p>
         </div>
 
         <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Information</h3>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Our Information
+          </h3>
+
           <div class="space-y-6">
+
+            <!-- Phone -->
             <div class="flex items-start">
+
               <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                 <i class="fas fa-phone-alt"></i>
               </div>
+
               <div class="ml-4">
                 <h4 class="font-bold text-gray-900">Phone</h4>
                 <p class="text-gray-600">1 (718) 730-3311</p>
               </div>
+
             </div>
+
+            <!-- Email -->
             <div class="flex items-start">
+
               <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                 <i class="fas fa-envelope"></i>
               </div>
+
               <div class="ml-4">
                 <h4 class="font-bold text-gray-900">Email</h4>
                 <p class="text-gray-600">MyCDPNY@gmail.com</p>
               </div>
+
+            </div>
+
+          </div>
+
+          <!-- Social Media -->
+          <div class="mt-8">
+
+            <h4 class="font-bold text-gray-900 mb-4">
+              Follow Us
+            </h4>
+
+            <div class="flex space-x-4">
+
+              <a
+                href="https://facebook.com/myCDPNY"
+                class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a
+                href="https://twitter.com/myCDPNY"
+                class="w-10 h-10 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+
+              <a
+                href="https://instagram.com/myCDPNY"
+                class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+
             </div>
           </div>
 
-          <div class="mt-8">
-            <h4 class="font-bold text-gray-900 mb-4">Follow Us</h4>
-            <div class="flex space-x-4">
-              <a href="https://facebook.com/myCDPNY" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/myCDPNY" class="w-10 h-10 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition"><i class="fab fa-twitter"></i></a>
-              <a href="https://instagram.com/myCDPNY" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
         </div>
       </div>
 
     </div>
   </section>
 
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        <!-- About Footer -->
         <div>
-          <img src="images/cdpny-logo.png" alt="CDPNY Logo" class="h-10 mb-4"/>
-          <p class="text-gray-400">Growing our community through sports, academics and recreational programs.</p>
-          <p class="text-gray-400 mt-2">Website: <a href="https://mycdpny.com" class="text-blue-400 hover:text-white">mycdpny.com</a></p>
+          <img
+            src="images/cdpny-logo.png"
+            alt="CDPNY Logo"
+            class="h-10 mb-4"
+          />
+
+          <p class="text-gray-400">
+            Growing our community through sports, academics
+            and recreational programs.
+          </p>
+
+          <p class="text-gray-400 mt-2">
+            Website:
+            <a
+              href="https://mycdpny.com"
+              class="text-blue-400 hover:text-white"
+            >
+              mycdpny.com
+            </a>
+          </p>
         </div>
 
+
+        <!-- Quick Links -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 class="text-lg font-semibold mb-4">
+            Quick Links
+          </h3>
+
           <ul class="space-y-2">
-            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
-            <li><a href="#events" class="text-gray-400 hover:text-white transition">Events</a></li>
-            <li><a href="#impact" class="text-gray-400 hover:text-white transition">Our Impact</a></li>
-            <li><a href="#board" class="text-gray-400 hover:text-white transition">Board</a></li>
-            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+
+            <li>
+              <a href="#home" class="text-gray-400 hover:text-white transition">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#about" class="text-gray-400 hover:text-white transition">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="#events" class="text-gray-400 hover:text-white transition">
+                Events
+              </a>
+            </li>
+
+            <li>
+              <a href="#impact" class="text-gray-400 hover:text-white transition">
+                Our Impact
+              </a>
+            </li>
+
+            <li>
+              <a href="#board" class="text-gray-400 hover:text-white transition">
+                Board
+              </a>
+            </li>
+
+            <li>
+              <a href="#support" class="text-gray-400 hover:text-white transition">
+                Support
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact" class="text-gray-400 hover:text-white transition">
+                Contact
+              </a>
+            </li>
+
           </ul>
         </div>
 
+
+        <!-- Programs -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">Programs</h3>
+          <h3 class="text-lg font-semibold mb-4">
+            Programs
+          </h3>
+
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Youth Development</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Financial Literacy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Community Cleanups</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Adult Education</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Neighborhood Projects</a></li>
+
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                Youth Development
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                Financial Literacy
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                Community Cleanups
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                Adult Education
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                Neighborhood Projects
+              </a>
+            </li>
+
           </ul>
         </div>
 
+
+        <!-- Newsletter -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-          <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates on events and initiatives.</p>
-          <form class="flex">
-            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"/>
-            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">
+
+          <h3 class="text-lg font-semibold mb-4">
+            Newsletter
+          </h3>
+
+          <p class="text-gray-400 mb-4">
+            Subscribe to our newsletter for updates
+            on events and initiatives.
+          </p>
+
+          <form class="flex" onsubmit="return false;">
+
+            <input
+              type="email"
+              placeholder="Your email"
+              class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"
+            />
+
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition"
+              aria-label="Subscribe"
+            >
               <i class="fas fa-paper-plane"></i>
             </button>
+
           </form>
+
         </div>
+
       </div>
 
+
+      <!-- Copyright -->
       <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 mb-4 md:mb-0">© 2025 CDPNY. All rights reserved.</p>
+
+        <p class="text-gray-400 mb-4 md:mb-0">
+          © 2026 CDPNY. All rights reserved.
+        </p>
+
         <div class="flex space-x-6">
-          <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
-          <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
-          <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
+
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            Privacy Policy
+          </a>
+
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            Terms of Service
+          </a>
+
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            Sitemap
+          </a>
+
         </div>
+
       </div>
+
     </div>
   </footer>
 
+
   <!-- Scripts -->
   <script>
+
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
       anchor.addEventListener('click', function (e) {
+
         const targetId = this.getAttribute('href');
-        if (!targetId || targetId === '#') return;
+
+        if (!targetId || targetId === '#') {
+          return;
+        }
+
         const el = document.querySelector(targetId);
-        if (!el) return;
+
+        if (!el) {
+          return;
+        }
+
         e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+
       });
+
     });
 
-    // Show modal on every page load
-    window.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('event-modal');
-      const closeBtn = document.getElementById('modal-close');
-
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-
-      const closeModal = () => {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      };
-
-      closeBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-    });
   </script>
+
 </body>
 </html>
